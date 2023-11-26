@@ -1,0 +1,94 @@
+<form  class="h-100 bg-dark" [formGroup]="inscriptionForm" (ngSubmit)="onAjoute()">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col">
+          <div class="card card-registration my-4">
+            <div class="row g-0">
+              <div class="col-xl-6 d-none d-xl-block">
+                <img src="../../../assets/aa43bc375c5854e2d167d08610889ba8.jpg"
+                  alt="Sample photo" class="img-fluid"
+                  style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+              </div>
+              <div class="col-xl-6">
+                <div class="card-body p-md-5 text-black">
+                  <h3 class="mb-5 text-uppercase">Inscription</h3>
+  
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="form3Example1m" class="form-control form-control-lg" formControlName="nom"/>
+                        <label class="form-label" for="form3Example1m">Nom</label>
+                      </div>
+                      <div *ngIf="ObligatoireValidator(this.nom)" class="alert alert-danger">le champ est obligatoire</div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="form3Example1n" class="form-control form-control-lg" formControlName="prenom" />
+                        <label class="form-label" for="form3Example1n">Prenom</label>
+                      </div>
+                      <div *ngIf="ObligatoireValidator(this.prenom)" class="alert alert-danger">le champ est obligatoire</div>
+                    </div>
+                  </div>
+  
+  
+                  <div class="form-outline mb-4">
+                    <input type="text" id="form3Example8" class="form-control form-control-lg" formControlName="ville"/>
+                    <label class="form-label" for="form3Example8">Ville</label>
+                  </div>
+                  <div *ngIf="ObligatoireValidator(this.ville)" class="alert alert-danger">le champ est obligatoire</div>
+                  <div *ngIf="VilleValidator()" class="alert alert-warning">le champ doit etre  >=3 lettres</div>
+  
+                  <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+  
+                    <h6 class="mb-0 me-4">Genre: </h6>
+  
+                    <div class="form-check form-check-inline mb-0 me-4">
+                      <input class="form-check-input" type="radio" value="Female" formControlName="genre"/>
+                      <label class="form-check-label" for="femaleGender">Female</label>
+                    </div>
+  
+                    <div class="form-check form-check-inline mb-0 me-4">
+                      <input class="form-check-input" type="radio" value="Male" formControlName="genre"/>
+                      <label class="form-check-label" for="maleGender">Male</label>
+                    </div>
+  
+  
+                  </div>
+  
+ 
+  
+                  <div class="form-outline mb-4">
+                    <input type="date"  class="form-control form-control-lg" formControlName="date"/>
+                    <label class="form-label" >Date de naissance</label>
+                  </div>
+                  <div *ngIf="ObligatoireValidator(this.date)" class="alert alert-danger">le champ est obligatoire</div>
+  
+                  <div class="form-outline mb-4">
+                    <input type="text" class="form-control form-control-lg" formControlName="nbt"/>
+                    <label class="form-label">Numero de telephone</label>
+                  </div>
+                  <div *ngIf="ObligatoireValidator(this.nbt)" class="alert alert-danger">le champ est obligatoire</div>
+                  <div *ngIf="NbtValidator()" class="alert alert-warning">8 chiffre</div>
+  
+                  <div class="form-outline mb-4">
+                    <input type="email" id="form3Example97" class="form-control form-control-lg" formControlName="email" />
+                    <label class="form-label" for="form3Example97">Email:</label>
+                  </div>
+                  <div *ngIf="ObligatoireValidator(this.email)" class="alert alert-danger">le champ est obligatoire</div>
+                  <div *ngIf="EmailValidator()" class="alert alert-warning">Le format de l'adresse e-mail est invalide. Veuillez inclure le symbole '@' dans votre adresse e-mail pour qu'elle soit valide.</div>
+  
+                  <div class="d-flex justify-content-end pt-3">
+                    <button type="button" class="btn btn-light btn-lg" [routerLink]="['/menufo/postes/commentaire',idcamp]" >Retour</button>
+                    <input type="submit" value="Submit form" class="btn btn-warning btn-lg ms-2" [disabled]="inscriptionForm.invalid">
+                    
+                    
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</form >

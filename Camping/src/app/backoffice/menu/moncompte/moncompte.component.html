@@ -1,0 +1,46 @@
+<div class="container my-5" >
+    <div class="card">
+      <form class="card-body" [formGroup]="authForm" (ngSubmit)="onUpdate()">
+        <h3 class="card-title">Mon Compte</h3>
+        <h5 class="card-subtitle mb-3">Modifier :</h5>
+  
+     
+          <div class="form-group">
+            <label for="username">Mot de passe:</label>
+            <div class="input-group">
+              <input type="Password" class="form-control"   formControlName="password" >
+             
+            </div>
+            <div *ngIf="myPassword?.errors?.['required'] && myPassword?.dirty" class="alert alert-danger">
+              le champ est obligatoire
+            </div>
+            <div *ngIf="myPassword?.errors?.['minlength'] && myPassword?.dirty" class="alert alert-warning">
+              le long de champ doit etre >=8
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="password">Confimation de Mot de passe:</label>
+            <div class="input-group">
+              <input type="password" class="form-control" formControlName="password2" >
+             
+            </div>
+            <div *ngIf="myPassword2?.errors?.['required'] && myPassword2?.dirty" class="alert alert-danger">
+              le champ est obligatoire
+            </div>
+            <div *ngIf="myPassword2?.errors?.['minlength'] && myPassword2?.dirty" class="alert alert-warning">
+              le long de champ doit etre >=8
+            </div>
+          </div>
+           <input type="submit" value="submit" class="btn btn-primary" [disabled]="authForm.invalid">
+      
+     
+      </form>
+    </div>
+  </div>
+ 
+  
+  
+  
+  
+  

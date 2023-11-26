@@ -1,0 +1,32 @@
+body {
+    background-color: #f8f9fa;
+    
+  }
+  .container1{
+    background-image: url('../../../../assets/toa-heftiba-x9I-6yoXrXE-unsplash.jpg'); 
+    background-size: cover;
+    color: white;
+    height: 950px;
+  }
+  .jumbotron {
+  
+    color: rgb(211, 158, 14)
+  }
+  .camping-images img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .paragraph {
+    font-size: 1.2em;
+    text-align: center;
+    margin: 50px 0;
+    color: rgb(211, 158, 14)
+  }
+  .a{
+    margin-top: 50px;
+    margin-left: 40px;
+    width: 300px;
+  }
+  .b{
+    height: 300px;
+  }

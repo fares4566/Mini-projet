@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="w-100 d-flex flex-column align-items-center">
+      <h3 class="mt-4 mb-3">Recherche:</h3>
+      <p class="m-1">Titre: <input type="text" (input)="onRecherche(text.value)" #text class="form-control"></p>
+  
+      <div *ngFor="let item of filteredTab" class="border rounded p-4 my-4 w-75">
+        <p> <strong>ID:</strong> <span>{{item.id}}</span></p>
+        <h4>Titre: {{item.intitule |titlecase}}</h4>
+  
+      
+          <strong>Content:</strong>
+          <div class="content">{{item.content |titlecase}}</div>
+       
+  
+        <img [src]=" item.photo" width="150" height="150px" *ngIf="item.photo !== ''" class="my-3">
+  
+        <p><strong>Place disponible:</strong> {{item.nbplacelibre}}</p>
+        <p><strong>Lieu:</strong> {{item.lieu |titlecase}}</p>
+        <p><strong>Date: </strong>{{item.date |date}}</p>
+         <p><a [routerLink]="['/menubo/monposte/comments', item.id]">Voir les commentaires</a></p>
+        <div class="btn-group mt-3">
+          <button class="btn btn-danger " (click)="onSupprimer(item.id)">Supprimer</button>
+          <button class="btn btn-primary" [routerLink]="['/menubo/monposte/modifier', item.id]">Modifier</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+

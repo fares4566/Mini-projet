@@ -1,0 +1,55 @@
+
+  <section>
+    <div class="container ">
+        <div class="row">
+          <div class="col-lg-4 col-md-5 col-sm-4 offset-md-1 offset-sm-1 col-12 mt-4 border rounded" >
+             
+            <img [src]="camp?.photo" class="card-img-top rounded" alt="..." width="250" height="350">
+            
+              <h5>{{camp?.intitule|titlecase}}</h5>
+                  <h6>{{camp?.lieu|titlecase}}</h6>
+                  
+              <p>{{camp?.content |titlecase}}</p>
+              <p><i class="fas fa-calendar-alt"></i> {{camp?.date}}</p>
+              <ul class="d-flex flex-row justify-content-between list-unstyled">
+                <li><a class="btn btn-link-unstyled"><i [ngClass]="{'fas fa-user':camp?.nbplacelibre!=0,'fa-solid fa-check':camp?.nbplacelibre==0}"></i> {{camp?.nbplacelibre==0?'':camp?.nbplacelibre}}</a></li>
+                <li> 
+                 <a class="btn btn-danger" [routerLink]="['/menufo/postes/inscription', camp?.id]" *ngIf="camp?.nbplacelibre!=0"> <i class="fa fa-user-plus" aria-hidden="true"></i></a>
+                  <a class="btn btn-success" *ngIf="camp?.nbplacelibre==0">Complet</a>
+            
+                </li>
+                
+            </ul>
+           
+            
+           
+            
+            </div>
+            <div class="col-sm-5 col-md-6 col-12 pb-4 mt-4">
+              <form  class="form-outline mb-4" [formGroup]="commentForm" (ngSubmit)="onEnvoyer()">
+         
+                <input type="text" id="addANote" class="form-control" placeholder="Type your name..." formControlName="nom" />
+                <textarea cols="30" rows="10" class="form-control" placeholder="Type comment..." formControlName="message"></textarea>
+                <input type="submit" value="Envoyer" class="btn btn-primary" >
+                <button  class="btn btn-primary m-1" routerLink="/menufo/postes">Retour</button>
+              </form >
+              <h1>Comments</h1>
+              <div class="card mb-4" *ngFor="let item of camp?.comments" >
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-row align-items-center">
+                      <p class="small mb-0 ms-2">{{item.nom}}</p>
+                    </div>
+                  </div>
+                <div class="card-body" >
+                  <p>{{item.message}}</p>
+      
+                  
+                </div>
+              </div>
+              </div>
+             
+          </div>
+        </div>
+      
+    
+</section>

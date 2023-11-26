@@ -1,0 +1,56 @@
+{
+  "camping": [
+    {
+      "intitule": "Back To Nature 2",
+      "content": "Explorez la splendeur naturelle d'Aïn Draham Rejoignez-nous pour une aventure inoubliable au cœur de la nature, avec notre programme de randonnée exceptionnel. Nous vous emmènerons dans un voyage à couper le souffle à travers les paysages pittoresques d'Oued ",
+      "nbplacelibre": 1,
+      "date": "2023-11-15",
+      "lieu": "Ain Draham",
+      "id": 1,
+      "photo": "../../../assets/aindraham.jpg",
+      "comments": [
+        {
+          "nom": "azeaz",
+          "message": "eaze"
+        },
+        {
+          "nom": "az",
+          "message": "z"
+        }
+      ],
+      "inscription": [
+        {
+          "nom": "aze",
+          "prenom": "azea",
+          "ville": "aze",
+          "genre": "Male",
+          "date": "2023-11-10",
+          "nbt": "25815451",
+          "email": "azeazeazazeaze@a"
+        }
+      ]
+    },
+    {
+      "intitule": "Adventure Time",
+      "content": "Le Camping pédestre est un excellent moyen de profiter de la nature et de se reconnecter avec l'extérieur. Elle peut améliorer votre santé mentale et physique, et elle est un moyen économique et écologique de voyager. Alors, pourquoi ne pas l'essayer cet automne?",
+      "date": "2023-11-30",
+      "photo": "https://firebasestorage.googleapis.com/v0/b/campingimages-a3a25.appspot.com/o/files0.6304351296934143%5Bobject%20File%5D?alt=media&token=7c71730a-502a-4e99-afea-0b52b494006e",
+      "nbplacelibre": 8,
+      "lieu": "Sousse",
+      "id": 2
+    },
+    {
+      "intitule": "azea",
+      "content": "zeazeaze azeazeazeazeza zazazazazazazaz azazazazaza zazazazazazazazazazazazazaz azazazazazaz azazaz azazazazaza zaza zaza zazaza zaza",
+      "date": "2023-11-14",
+      "photo": "https://firebasestorage.googleapis.com/v0/b/campingimages-a3a25.appspot.com/o/files0.25485437614870676%5Bobject%20File%5D?alt=media&token=d91578a8-f3aa-481e-bdd0-248e918691a4",
+      "nbplacelibre": 10,
+      "lieu": "azea",
+      "id": 4
+    }
+  ],
+  "auth": {
+    "username": "admin",
+    "password": "12345678"
+  }
+}

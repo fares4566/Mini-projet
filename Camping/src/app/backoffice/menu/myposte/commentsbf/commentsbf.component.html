@@ -1,0 +1,28 @@
+
+<section style="background-color: #e7effd;">
+  <div class="container my-5 py-5 text-dark">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-11 col-lg-9 col-xl-7">
+        <div class="d-flex flex-column mb-4 ">
+     
+          <div class="card w-100" *ngFor="let item of Camp?.comments;index as i">
+            <div class="card-body p-4">
+              <div class="">
+                <h5>{{item.nom}}</h5>
+             
+                <p>
+                  {{item.message}}
+                </p>
+
+                
+              </div>
+              <button class="btn btn-primary" (click)="onDelete(i)">Supprimer</button>
+            </div>
+          </div>
+        </div>
+        <h4 *ngIf="Camp?.comments?.length==0 || Camp?.comments==null">Aucun commentaire</h4>
+      
+      </div>
+    </div>
+  </div>
+</section>

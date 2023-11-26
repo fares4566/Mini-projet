@@ -1,0 +1,147 @@
+<div class="container1 ">
+  <div class="jumbotron text-center">
+      <h1 class="display-4">Bienvenue au Club de Camping</h1>
+      <p class="lead">Profitez du bonheur de la camping pédestre dans la grande nature.</p>
+    </div>
+    
+  
+  <div class="container camping-images">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="../../../assets/camping-image1.jpg" alt="Camping Image 1" class="rounded">
+        </div>
+        <div class="col-md-4">
+          <img src="../../../assets/camping-image2.jpg" alt="Camping Image 2" class="rounded">
+        </div>
+        <div class="col-md-4">
+          <img src="../../../assets/camping-image3.jpg" alt="Camping Image 3" class="rounded">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <p class="paragraph">
+        Bienvenue chez CampingClub! Nous sommes dévoués à offrir des expériences de camping inoubliables qui répondent aux besoins divers de nos clients. Que vous cherchiez un repos tranquille ou une aventure palpitante, nos terrains de camping sont le cadre idéal pour vous reconnecter avec la nature et profiter du grand air. Notre personnel expert est formé pour vous assurer que votre expérience de camping est sécurisée, confortable et remplie de moments mémorables. Nos terrains de camping sont équipés d'installations modernes, tandis que nos activités et programmes sont conçus pour répondre à tous les âges et intérêts. Alors, emballer vos affaires et rejoignez-nous pour une aventure de camping que vous ne pourrez pas oublier!
+      </p>
+    </div>
+
+  
+    
+  </div>
+  
+  
+  
+          
+          
+      
+  
+  
+  
+
+  
+    <footer class="text-white text-center text-lg-start  " style="background-color: #4B515D;">
+  
+    <div class="container p-4">
+  
+      <div class="row mt-4">
+  
+        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4">À propos de moi</h5>
+  
+          <p>
+            Je suis Fares Ben Romdhane, 21 ans, étudiant en Développement de Systèmes Informatiques à l'ISET Charguia. Passionné par la technologie, je suis constamment en quête de nouvelles compétences pour contribuer à des solutions innovantes.
+          </p>
+        
+      
+  
+          <div class="mt-4">
+         
+            <a type="button" class="btn btn-floating btn-dark btn-lg"><i class="fab fa-facebook-f"></i></a>
+     
+            <a type="button" class="btn btn-floating btn-dark btn-lg"><i class="fab fa-dribbble"></i></a>
+    
+            <a type="button" class="btn btn-floating btn-dark btn-lg"><i class="fab fa-twitter"></i></a>
+        
+            <a type="button" class="btn btn-floating btn-dark btn-lg"><i class="fab fa-google-plus-g"></i></a>
+        
+          </div>
+        </div>
+       
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0 a">
+         
+  
+  
+          <ul class="fa-ul" style="margin-left: 1.65em;">
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Tunis, La Marsa</span>
+            </li>
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">CampingClub@gmail.com</span>
+            </li>
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+ 01 234 567 88</span>
+            </li>
+         
+          </ul>
+        </div>
+     
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0 ">
+          <h5 class="text-uppercase mb-4">Météo</h5>
+          <form [formGroup]="myForm" class="container mt-4">
+  
+  
+  
+  
+       
+  
+            <div class="col-md-8 col-lg-6 col-xl-4 w-100  ">
+      
+              <div class="card" style="color: #4B515D; border-radius: 35px;">
+                <div class="card-body p-4">
+      
+                  <div class="d-flex">
+                    <h6 class="flex-grow-1"> <div class="form-group">
+                      <label for="tunisiaStates">Select a Tunisia State:</label>
+                      <select formControlName="State" id="tunisiaStates" class="form-control w-25" (change)="weatherAffiche()">
+                        <option value="" disabled selected>Select a state</option>
+                        <option *ngFor="let state of tunisiaStates" [value]="state">{{ state }}</option>
+                      </select>
+                    </div></h6>
+                    <h6>{{localtime}}</h6>
+                  </div>
+      
+                  <div class="d-flex flex-column text-center mt-5 mb-4">
+                    <h6 class="display-4 mb-0 font-weight-bold" style="color: #1C2331;">  {{ myweather | celsius}} </h6>
+                  
+                  </div>
+      
+                  <div class="d-flex align-items-center">
+                    <div class="flex-grow-1" style="font-size: 1rem;">
+                      <div><i class="fas fa-wind fa-fw" style="color: #868B94;"></i> <span class="ms-1"> {{wind}} km/h
+                        </span></div>
+                      <div><i class="fa-solid fa-water" style="color: #868B94;"></i> <span class="ms-1"> {{waterrise}} </span>
+                      </div>
+                      <div><i class="fa fa-cloud" aria-hidden="true" style="color: #868B94;"></i> <span class="ms-1"> {{cloud}}%</span>
+                      </div>
+                    </div>
+                  </div>
+      
+                </div>
+              </div>
+      
+            </div>
+          </form>
+        </div>
+        
+      
+      </div>
+  
+    </div>
+  
+  
+  
+  
+  </footer>
+  
+
+  
+  

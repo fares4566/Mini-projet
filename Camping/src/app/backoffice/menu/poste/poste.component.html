@@ -1,0 +1,31 @@
+<div>
+
+<h1 class="text-center">Poster</h1>
+<form class="form-group w-50 mx-auto rounded p-4 border " [formGroup]="campForm" (ngSubmit)="onAjoute()">
+<label>Intitulé :</label><br>
+<input type="text"  class="form-control" formControlName="intitule"><br>
+<div *ngIf="ObligatoireValidator(this.intitule)" class="alert alert-danger">le champ est obligatoire</div>
+<label>content :</label><br>
+ <textarea cols="40" rows="10"  class="form-control" formControlName="content"></textarea><br>
+ <div *ngIf="ObligatoireValidator(this.content)" class="alert alert-danger">le champ est obligatoire</div>
+ <div *ngIf="contentValidator()" class="alert alert-warning">le champ doit etre dépassé 24 lettres</div>
+<label>photo :</label><br>
+<img [src]="url" class="form-control w-25" >
+ <input type="file"  (change)="onFileSelected($event)" class="form-control w-25" formControlName="photo"><br>
+
+
+<label>nombre de participants :</label><br>
+ <input type="number"  class="form-control" formControlName="nbplacelibre"><br>
+ <div *ngIf="ObligatoireValidator(this.nbplacelibre)" class="alert alert-danger">le champ est obligatoire</div>
+<label>date :</label><br>
+<input type="date" class="form-control" formControlName="date"><br>
+<div *ngIf="ObligatoireValidator(this.date)" class="alert alert-danger">le champ est obligatoire</div>
+<label>lieu :</label><br>
+ <input type="text"  class="form-control" formControlName="lieu"><br>
+ <div *ngIf="ObligatoireValidator(this.lieu)" class="alert alert-danger">le champ est obligatoire</div>
+ <div *ngIf="this.lieu?.errors?.['minlength'] && this.lieu?.dirty" class="alert alert-warning">le champ doit etre  >=2 lettres</div>
+<input type="submit" value="Submit" class="btn btn-primary" [disabled]="campForm.invalid" >
+</form>
+
+
+</div>
